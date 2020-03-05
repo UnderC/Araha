@@ -61,7 +61,7 @@ module.exports = class Remove extends Model {
       return pkg.msg.channel.send(Embed.get())
     }
 
-    const removed = player.remove(position)
+    const removed = queue.del(position)
     Embed.addField(
       pkg.lang.get('cmd_success'),
       pkg.lang.get('removed', [removed])
